@@ -3,20 +3,23 @@ import loginImage from "../../public/catalin-dumitra-cu-UaUBT6F7TvY-unsplash.jpg
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Separator } from "@/components/ui/separator";
 
 const page = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto px-4 md:my-16">
       <div className="max-w-6xl mx-auto mt-6">
-        <div className="shadow-lg flex rounded-md">
-          <div className="w-1/2 h-[650px]">
-            <Image
-              src={loginImage}
-              alt="titleImage"
-              className="rounded-l-md h-full object-cover"
-            />
+        <div className="shadow-lg flex rounded-md md:h-[650px]">
+          <div className="w-1/2">
+            <div className="h-full">
+              <Image
+                src={loginImage}
+                alt="titleImage"
+                className="rounded-l-md h-full object-cover"
+              />
+            </div>
           </div>
-          <div className="md:w-1/2 flex flex-col justify-center items-center h-[650px]">
+          <div className="md:w-1/2 flex flex-col justify-center items-center md:mx-24">
             <div className="md:text-3xl font-bold bg-gradient-to-r from-yellow-500 via-blue-500 to-red-500 bg-clip-text text-transparent">
               Vista
             </div>
@@ -24,7 +27,7 @@ const page = () => {
               Sign in to your account
             </div>
             <div className="w-full md:mt-4">
-              <form className="md:mx-24 flex flex-col">
+              <form className="flex flex-col">
                 <div>Email</div>
                 <input
                   type="text"
@@ -52,6 +55,11 @@ const page = () => {
                   </Link>
                 </div>
               </form>
+            </div>
+            <div className="flex gap-2 w-full md:mt-8 justify-center items-center">
+              <Separator className="w-4/12" />
+              <div className="w-4/12 text-center">or login with</div>
+              <Separator className="w-4/12" />
             </div>
           </div>
         </div>

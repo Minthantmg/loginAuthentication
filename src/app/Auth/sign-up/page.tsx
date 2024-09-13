@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const page = () => {
   return (
-    <div className="container mx-auto px-4 py-10">
+    <div className="container mx-auto px-4 md:py-10">
       <div className="max-w-6xl mx-auto mt-6">
-        <div className="shadow-lg flex rounded-md">
-          <div className="md:w-1/2 h-full flex flex-col justify-center items-center h-[650px]">
+        <div className="shadow-lg flex rounded-md md:h-[650px]">
+          <div className="md:w-1/2 flex flex-col justify-center items-center">
             <div className="md:text-3xl font-bold bg-gradient-to-r from-yellow-500 via-blue-500 to-red-500 bg-clip-text text-transparent">
               Vista
             </div>
