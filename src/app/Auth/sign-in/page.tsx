@@ -1,6 +1,4 @@
 import React from "react";
-import loginImage from "../../public/catalin-dumitra-cu-UaUBT6F7TvY-unsplash.jpg";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
@@ -9,16 +7,7 @@ const page = () => {
   return (
     <div className="container mx-auto px-4 md:my-16">
       <div className="max-w-6xl mx-auto mt-6">
-        <div className="shadow-lg flex rounded-md md:h-[650px]">
-          <div className="w-1/2">
-            <div className="h-full">
-              <Image
-                src={loginImage}
-                alt="titleImage"
-                className="rounded-l-md h-full object-cover"
-              />
-            </div>
-          </div>
+        <div className="flex justify-center items-center rounded-md shadow-lg">
           <div className="md:w-1/2 flex flex-col justify-center items-center md:mx-24">
             <div className="md:text-3xl font-bold bg-gradient-to-r from-yellow-500 via-blue-500 to-red-500 bg-clip-text text-transparent">
               Vista
@@ -47,7 +36,7 @@ const page = () => {
                 </Link>
                 <Button className="md:mt-10">Login</Button>
                 <div className="flex justify-center items-center md:mt-6">
-                  Don't have an account?Register
+                  Don&apos;t have an account?Register
                   <Link href="/Auth/sign-up">
                     <span className="underline text-blue-400 cursor-pointer md:ml-1">
                       here
