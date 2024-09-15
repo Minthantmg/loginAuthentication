@@ -1,7 +1,9 @@
+'use client'
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import { signIn } from "next-auth/react";
 
 const page = () => {
   return (
@@ -9,7 +11,8 @@ const page = () => {
       <div className="max-w-6xl mx-auto mt-6">
         <div className="flex justify-center items-center rounded-md shadow-lg">
           <div className="md:w-1/2 flex flex-col justify-center items-center md:mx-24">
-            <div className="md:text-3xl font-bold bg-gradient-to-r from-yellow-500 via-blue-500 to-red-500 bg-clip-text text-transparent">
+            <div className="md:text-3xl font-bold bg-gradient-to-r from-yellow-500
+             via-blue-500 to-red-500 bg-clip-text text-transparent">
               Vista
             </div>
             <div className="text-2xl text-gray-500 font-bold md:mt-4">
@@ -50,6 +53,7 @@ const page = () => {
               <div className="w-4/12 text-center">or login with</div>
               <Separator className="w-4/12" />
             </div>
+            <Button type="button" onClick={() => signIn("github")}>Github</Button>
           </div>
         </div>
       </div>
