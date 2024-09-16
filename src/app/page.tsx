@@ -1,10 +1,9 @@
 import React from "react";
-import SignIn from "./Auth/sign-in/page";
-
+import Hero from "./hero/page";
 const page = () => {
   return (
     <div>
-      <SignIn />
+      <Hero />
     </div>
   );
 };
