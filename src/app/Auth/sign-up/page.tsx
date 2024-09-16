@@ -41,11 +41,11 @@ const page = () => {
                   className="md:mt-2 border md:py-1 md:px-3 rounded-sm"
                 />
                 <Button className="md:mt-10">Login</Button>
-                <div className="flex justify-center items-center md:mt-6">
+                <div className="flex justify-center items-center md:my-6">
                   Already have an account?
                   <Link href="/Auth/sign-in">
                     <span className="underline text-blue-400 cursor-pointer md:ml-1">
-                    Login
+                      Login
                     </span>
                   </Link>
                 </div>
