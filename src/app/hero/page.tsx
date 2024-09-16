@@ -4,6 +4,7 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
+import { useUser } from "../../../hooks/useUser";
 
 const page = () => {
   const { data } = useSession();
@@ -22,7 +23,13 @@ const page = () => {
       {data ? (
         <div className="flex flex-col">
           {data.user?.image ? (
-            <Image src={userImage} alt="user" width={150} height={150} />
+            <Image
+              src={userImage}
+              alt="user"
+              width={150}
+              height={150}
+              priority
+            />
           ) : (
             <div>No Image Available</div>
           )}
