@@ -13,9 +13,9 @@ interface ProvidersProps {
 const Providers = ({ children, session }: ProvidersProps) => {
   const queryClient = new QueryClient();
   return (
-    <SessionProvider session={session}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </SessionProvider>
+    // <SessionProvider session={session}>
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    // </SessionProvider>
   );
 };
 
