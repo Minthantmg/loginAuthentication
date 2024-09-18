@@ -31,7 +31,7 @@ const Page = () => {
       <Button className="w-full max-w-xs md:mt-6" onClick={gotoReset}>
         Reset password
       </Button>
-      <Link href="/">
+      <Link href="/Auth/sign-in">
         <div className="flex md:mt-6 cursor-pointer">
           <MoveLeft />
           <span className="md:ml-2">Back to log in</span>
