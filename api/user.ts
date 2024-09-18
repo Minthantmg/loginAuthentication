@@ -8,3 +8,16 @@ export const getUserList = async () => {
     throw e;
   }
 };
+
+export const login = async (userData: { email: string; password: string }) => {
+  try {
+    const res = await axiosInstance.post("/login", userData);
+    if (res.status === 200) {
+      return res.data;
+    } else {
+      throw new Error("Authentication Failed: " + res.statusText);
+    }
+  } catch (e) {
+    throw e;
+  }
+};
